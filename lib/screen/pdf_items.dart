@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pdf_demo/app_theme/color_constants.dart';
 import 'package:pdf_demo/contansts/app_constants.dart';
 import 'package:pdf_demo/models/pdf_files.dart';
 
@@ -16,7 +17,7 @@ class PDFItems extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 21, horizontal: 44),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(6),
-          color: Colors.white,
+          color: ColorConstants.whiteColor,
         ),
         child: Column(children: [
           SvgPicture.asset(AppConstants.pdfUrl),
