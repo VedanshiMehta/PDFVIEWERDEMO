@@ -1,5 +1,5 @@
 import 'dart:io';
-import 'package:path/path.dart' as path;
+import 'package:path/path.dart';
 import 'package:flutter/services.dart';
 import 'package:path_provider/path_provider.dart';
 
@@ -20,9 +20,9 @@ class PDFFiles {
   }
 
   static Future<File> _storeFile(String assetfiles, List<int> bytes) async {
-    var fileName = path.basename(assetfiles);
+    var fileName = basename(assetfiles);
     var dir = await getApplicationDocumentsDirectory();
-    File file = File('${dir.path}/$fileName');
+    final file = File('${dir.path}/$fileName');
     await file.writeAsBytes(bytes);
     return file;
   }
